@@ -1,0 +1,25 @@
+Users {
+	id int pk
+	email varchar
+	password varchar
+	role enum('admin', 'streamer')
+	created_at datetime
+	updated_at datetime null
+	last_login datetime null
+	status enum('active', 'inactive') null
+	profile_picture varchar null
+	bio text null
+}
+
+Pages {
+	id int pk
+	user_id int > Users.id
+	title varchar
+	created_at datetime
+	updated_at datetime null
+	status enum('published', 'draft') null
+	visibility enum('public', 'private') null
+	slug varchar null
+	description text null
+	keywords varchar null
+}
