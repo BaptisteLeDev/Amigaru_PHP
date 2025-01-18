@@ -19,4 +19,4 @@
                                                | image_size (px)  |
                                                +------------------+
 
-![Image MCD - V2](https://myoctocat.com/assets/images/base-octocat.svg)
+![Image MCD - V2](https://github.com/BaptisteLeDev/Projet_AmigaruWeb/blob/main/github/MCD_AmigaruWeb_V2.png?raw=true)
