@@ -1,3 +1,7 @@
+CREATE DATABASE amigaru;
+CREATE USER amigaru_user WITH PASSWORD 'yourpassword';
+GRANT ALL PRIVILEGES ON DATABASE amigaru TO amigaru_user;
+
 CREATE TABLE "Users" (
   "id" integer PRIMARY KEY,
   "email" varchar UNIQUE,
@@ -14,8 +18,8 @@ CREATE TABLE "Pages" (
 CREATE TABLE "Sections" (
   "id" integer PRIMARY KEY,
   "page_id" integer NOT NULL,
-  "section_number" tinyint,
-  "content_type" enum(text,image,title),
+  "section_number" integer,
+  "content_type" (text,image,title),
   "content" text
 );
 
