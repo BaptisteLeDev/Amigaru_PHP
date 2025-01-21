@@ -16,7 +16,7 @@ include __DIR__ . '/../assets/header.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amigaru - Accueil</title>
-    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -25,7 +25,7 @@ include __DIR__ . '/../assets/header.php';
     </header>
 
     <main>
-        <a href="page.php">Voir les membres</a>
+        <a href="nos_membres.php">Voir les membres</a>
     </main>
 
     <!-- Inclure le footer -->
