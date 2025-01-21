@@ -16,4 +16,5 @@
 > 14h25 - Création de la BDD via PostgreSQL
 > 14h45 - Préparation de l'infratructure à la BDD et arborescence.
 
-
+### 21/01/2025
+> 10h - Initialisation de la BDD avec Laragon en SQL
