@@ -28,7 +28,6 @@ include __DIR__ . '/../assets/header.php';
         <a href="nos_membres.php">Voir les membres</a>
     </main>
 
-    <!-- Inclure le footer -->
     <?php include __DIR__ . '/../assets/footer.php'; ?>
 </body>
 </html>
