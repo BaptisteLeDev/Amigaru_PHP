@@ -17,4 +17,7 @@
 > 14h45 - Préparation de l'infratructure à la BDD et arborescence.
 
 ### 21/01/2025
-> 10h - Initialisation de la BDD avec Laragon en SQL
+> 10h00 - Initialisation de la BDD avec Laragon en SQL
+> 10h30 - Utilisation de HeidiSQL pour modifier la BDD
+> 10h30/12h00 - Test de la BDD / Affichage information BDD sur le Php
+> 12h00/16h00 - Test page éditable 
