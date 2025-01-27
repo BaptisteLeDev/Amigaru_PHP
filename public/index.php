@@ -20,6 +20,7 @@ include __DIR__ . '/../assets/header.php';
   <title>Amigaru</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="output.css">
+  <link rel=”icon” href=logo.ico”>
   <style>
     .separator {
       width: 50%;
@@ -125,20 +126,20 @@ include __DIR__ . '/../assets/header.php';
     </div>
   </section>
   <!-- Section 4 : Comment nous rejoindre -->
-  <section class="p-8 lg:px-[200px] lg:py-[100px] bg-gray-800 rounded-t-[50px]">
+  <section class="p-8 lg:px-[200px] lg:py-[100px] bg-neutral-700 rounded-t-[50px]">
     <h2 class="text-3xl font-bold text-center mb-4">Comment nous rejoindre ?</h2>
     <p class="text-lg text-left max-w-2xl mx-auto">
       Rejoindre Amigaru est simple ! Contactez-nous via nos réseaux sociaux ou notre serveur Discord.
       Découvrez une communauté dynamique et passionnée prête à vous accueillir.
     </p>
     <div class="text-center mt-8">
-      <a href="#" class="bg-blue-600 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-blue-700">
+      <a href="#" class="bg-yellow-300 text-black py-2 px-4 rounded-lg shadow-lg hover:bg-yellow-400">
         Rejoignez-nous !
       </a>
     </div>
   </section>
-
+  <?php include __DIR__ . '/../assets/footer.php'; ?>
 </body>
-<?php include __DIR__ . '/../assets/footer.php'; ?>
+
 
 </html>

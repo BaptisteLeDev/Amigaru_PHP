@@ -16,6 +16,7 @@ try {
 // Vérifier l'ID de la page dans l'URL
 if (!isset($_GET['id'])) {
     die('Aucune page sélectionnée.');
+    //faire redirection page membres
 }
 
 $page_id = (int)$_GET['id'];
@@ -75,6 +76,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo '<p style="color: red;">Erreur lors de la mise à jour.</p>';
     }
 }
+
+include __DIR__ . '/../assets/header.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -121,6 +125,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             background-color: #555;
         }
     </style>
+        <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="output.css">
 </head>
 <body>
     <h1>Édition de la page</h1>

@@ -9,7 +9,7 @@ backdrop-filter: blur(5px);
 border: 1px solid rgba(255, 255, 255, 0.3);">
   <div class="flex justify-between items-center">
     <!-- Logo -->
-    <a href="index.php" class="text-xl font-bold text-white">⭐ Amigaru</a>
+    <a href="index.php" class="text-xl font-bold text-white hover:text-neutral-900">⭐ Amigaru</a>
 
     <!-- Bouton burger pour mobile -->
     <button class="lg:hidden text-white focus:outline-none" onclick="toggleMenu()">
@@ -21,12 +21,12 @@ border: 1px solid rgba(255, 255, 255, 0.3);">
     <!-- Liens de navigation (Desktop) -->
     <nav class="hidden lg:flex items-center justify-between space-x-6 ">
       <ul class="flex items-center space-x-6">
-        <li><a href="nos_membres.php" class="text-white font-semibold hover:text-gray-700">Nos Membres</a></li>
-        <li><a href="#" class="text-white font-semibold hover:text-gray-700">Nous Rejoindre</a></li>
-        <li><a href="#" class="text-white font-semibold hover:text-gray-700">Nous Contacter</a></li>
-        <li><a href="membre_edition.php" class="text-white font-semibold hover:text-gray-700">Édition</a></li>
+        <li><a href="nos_membres.php" class="text-white font-semibold hover:text-neutral-900">Nos Membres</a></li>
+        <li><a href="#" class="text-white font-semibold hover:text-neutral-900">Nous Rejoindre</a></li>
+        <li><a href="#" class="text-white font-semibold hover:text-neutral-900">Nous Contacter</a></li>
+        <li><a href="membre_edition.php" class="text-white font-semibold hover:text-neutral-900">Édition</a></li>
       </ul>
-      <button class="flex items-center gap-2 px-4 py-2 bg-white text-black font-bold rounded-full hover:bg-gray-800">
+      <button class="flex items-center gap-2 px-4 py-2 bg-white text-black font-bold rounded-full hover:bg-neutral-900 hover:text-white">
         Compte Étoile <span class="text-lg">✨</span>
       </button>
     </nav>
@@ -35,15 +35,15 @@ border: 1px solid rgba(255, 255, 255, 0.3);">
   <!-- Menu Mobile -->
   <div id="mobile-menu" class="hidden flex-col mt-4 space-y-4 lg:hidden">
     <ul class="space-y-2">
-      <li><a href="nos_membres.php" class="block text-white font-semibold hover:text-white text-left">Nos Membres</a>
+      <li><a href="nos_membres.php" class="block text-white font-semibold hover:text-neutral-900 text-left">Nos Membres</a>
       </li>
-      <li><a href="#" class="block text-white font-semibold hover:text-white text-left">Nous Rejoindre</a></li>
-      <li><a href="#" class="block text-white font-semibold hover:text-white text-left">Nous Contacter</a></li>
-      <li><a href="membre_edition.php" class="block text-white font-semibold hover:text-white text-left">Édition</a>
+      <li><a href="#" class="block text-white font-semibold hover:text-neutral-900 text-left">Nous Rejoindre</a></li>
+      <li><a href="#" class="block text-white font-semibold hover:text-neutral-900 text-left">Nous Contacter</a></li>
+      <li><a href="membre_edition.php" class="block text-white font-semibold hover:text-neutral-900 text-left">Édition</a>
       </li>
     </ul>
     <button
-      class="flex items-center gap-2 px-4 py-2 bg-white text-black font-bold rounded-full hover:bg-gray-800 min-w-[10%]">
+      class="flex items-center gap-2 px-4 py-2 bg-white text-black font-bold rounded-full hover:bg-neutral-900 hover:text-white min-w-[10%]">
       Compte Étoile <span class="text-lg">✨</span>
     </button>
   </div>
