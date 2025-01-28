@@ -1,26 +1,15 @@
 <?php
-// Connexion à la base de données
-$host = 'localhost';
-$dbname = 'amigaru_web';
-$username = 'root';
-$password = '1234'; // Remplace par ton mot de passe si nécessaire
-
-try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    echo 'Erreur de connexion : ' . $e->getMessage();
-    exit;
-}
+include '../config/db.php';
 
 // Récupérer les utilisateurs avec le rôle "streamer" et leur ID
-$query = "SELECT id, username FROM users WHERE role = 'streamer'";
+$query = "SELECT id, username FROM user WHERE role = 'streamer'";
 $stmt = $pdo->prepare($query);
 $stmt->execute();
 
 // Affichage des résultats
 $streamers = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+$is_logged_in = isset($_SESSION['user_id']);
 include __DIR__ . '/../assets/header.php';
 ?>
 
@@ -44,7 +33,7 @@ include __DIR__ . '/../assets/header.php';
   background-position: center;
   width: 100%;
  ">
-        <h1 class="text-4xl font-bold mb-4">Membres Amigaru</h1>
+        <h1 class="text-4xl font-bold mb-4 mt-10">Membres Amigaru</h1>
         <p class="text-lg">Découvrez les streameurs de notre communauté</p>
     </section>
 

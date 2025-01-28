@@ -15,7 +15,7 @@ $membreId = intval($_GET['id']);
 // Requête SQL pour récupérer les données du membre
 $sql = "SELECT p.*, u.username 
         FROM pages p 
-        JOIN users u ON p.user_id = u.id 
+        JOIN user u ON p.user_id = u.id 
         WHERE p.id = :id";
 $stmt = $pdo->prepare($sql);
 $stmt->bindParam(':id', $membreId, PDO::PARAM_INT);
@@ -25,6 +25,8 @@ $pageData = $stmt->fetch();
 if (!$pageData) {
     die('Erreur : Aucune page trouvée pour ce membre.');
 }
+
+$is_logged_in = isset($_SESSION['user_id']);
 include __DIR__ . '/../assets/header.php';
 ?>
 
@@ -34,8 +36,8 @@ include __DIR__ . '/../assets/header.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($pageData['title']); ?></title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>

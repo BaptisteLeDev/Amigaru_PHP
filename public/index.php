@@ -1,4 +1,5 @@
 <?php
+session_start();
 include __DIR__ . '/../config/db.php';
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -8,6 +9,8 @@ if (!$pdo) {
   die("Erreur de connexion à la base de données.");
 }
 include __DIR__ . '/../assets/header.php';
+
+$is_logged_in = isset($_SESSION['user_id']);
 ?>
 
 

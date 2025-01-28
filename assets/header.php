@@ -24,11 +24,15 @@ border: 1px solid rgba(255, 255, 255, 0.3);">
         <li><a href="nos_membres.php" class="text-white font-semibold hover:text-neutral-900">Nos Membres</a></li>
         <li><a href="#" class="text-white font-semibold hover:text-neutral-900">Nous Rejoindre</a></li>
         <li><a href="#" class="text-white font-semibold hover:text-neutral-900">Nous Contacter</a></li>
-        <li><a href="membre_edition.php" class="text-white font-semibold hover:text-neutral-900">Édition</a></li>
-      </ul>
+      </ul><a href="login.php" >
       <button class="flex items-center gap-2 px-4 py-2 bg-white text-black font-bold rounded-full hover:bg-neutral-900 hover:text-white">
+    <?php if ($is_logged_in): ?>
+        Édition <span class="text-lg">🖌️</span>
+    <?php else: ?>
         Compte Étoile <span class="text-lg">✨</span>
-      </button>
+    <?php endif; ?>
+</button>
+      </a>
     </nav>
   </div>
 
@@ -39,13 +43,7 @@ border: 1px solid rgba(255, 255, 255, 0.3);">
       </li>
       <li><a href="#" class="block text-white font-semibold hover:text-neutral-900 text-left">Nous Rejoindre</a></li>
       <li><a href="#" class="block text-white font-semibold hover:text-neutral-900 text-left">Nous Contacter</a></li>
-      <li><a href="membre_edition.php" class="block text-white font-semibold hover:text-neutral-900 text-left">Édition</a>
-      </li>
     </ul>
-    <button
-      class="flex items-center gap-2 px-4 py-2 bg-white text-black font-bold rounded-full hover:bg-neutral-900 hover:text-white min-w-[10%]">
-      Compte Étoile <span class="text-lg">✨</span>
-    </button>
   </div>
 </header>
 
