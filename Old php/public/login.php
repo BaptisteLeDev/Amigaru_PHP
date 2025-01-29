@@ -27,6 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <title>Connexion</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="output.css">
 </head>
 <body class="bg-neutral-900 text-white">
     <form action="" method="POST" class="max-w-md mx-auto mt-10 bg-neutral-800 p-6 rounded-lg">
