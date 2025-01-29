@@ -33,3 +33,11 @@
 > PAUSE
 
 > 13h00 - Test de tailwind Css sur le sous-site (code expérimental)
+
+
+### 28/01/2025
+> 13h00/19h00 - Tentative de migartion vers une architecture MVC
+
+### 29/01/2025
+> 8h00/12h00 - Échec de l'adaptation du système d'authentification, MVC reppousser en bonus et optimisation
+> 13h00 - Reprise d'Amigaru en No MVC
