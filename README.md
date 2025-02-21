@@ -40,4 +40,4 @@
 
 ### 29/01/2025
 > 8h00/12h00 - Échec de l'adaptation du système d'authentification, MVC reppousser en bonus et optimisation
-> 13h00 - Reprise d'Amigaru en No MVC
+> 13h00 - Reprise d'Amigaru en No MVC,
