@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e1e;
+    color: #333;
+}
+
+header, footer {
+    background-color: #222;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+h1, h2 {
+    color: #2c3e50;
+}
+
+/* Barre de navigation */
+.navbar {
+    margin-top: 30px;
+    margin-left: 200px;
+    margin-right: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background: linear-gradient(to right, #F8D3FC, #cfdcfe);
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Liens de navigation */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #555;
+}
+
+/* Bouton compte */
+.nav-account {
+    display: flex;
+    align-items: center;
+}
+
+.account-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.account-button:hover {
+    background-color: #333;
+}
+
+.icon {
+    font-size: 18px;
+}
