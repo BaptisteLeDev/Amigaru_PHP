@@ -10,7 +10,6 @@ include __DIR__ . '/../config/db.php';
 // Vérifier l'ID de la page dans l'URL
 if (!isset($_GET['id'])) {
     die('Aucune page sélectionnée.');
-    //faire redirection page membres
 }
 
 $page_id = (int)$_GET['id'];
@@ -30,6 +29,7 @@ $default_values = [
     'section1_text' => 'Contenu de la section 1',
     'section2_title' => 'Titre de la section 2',
     'section2_text' => 'Contenu de la section 2',
+    'section2_image' => '',
     'section3_image' => '',
     'section3_title' => 'Titre de la section 3',
     'section3_text' => 'Contenu de la section 3',
@@ -47,7 +47,7 @@ foreach ($default_values as $key => $default) {
 
 // Sauvegarder les modifications
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $fields = ['title', 'section1_image', 'section1_title', 'section1_text', 'section2_title', 'section2_text', 'section3_image', 'section3_title', 'section3_text', 'section4_title', 'section4_text', 'section5_banner'];
+    $fields = ['title', 'section1_image', 'section1_title', 'section1_text', 'section2_title', 'section2_text', 'section2_image', 'section3_image', 'section3_title', 'section3_text', 'section4_title', 'section4_text', 'section5_banner'];
     $update_query = "UPDATE pages SET ";
 
     foreach ($fields as $field) {
@@ -125,9 +125,15 @@ include __DIR__ . '/../assets/header.php';
             <!-- Section 2 -->
             <div>
                 <h2 class="text-2xl font-bold mb-4">Section 2</h2>
-                <div>
-                    <label for="section2_title" class="block text-lg font-semibold mb-2">Titre</label>
-                    <input type="text" id="section2_title" name="section2_title" value="<?php echo htmlspecialchars($page['section2_title']); ?>" class="w-full p-3 rounded-md bg-gray-700 text-white focus:ring focus:ring-blue-500">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label for="section2_image" class="block text-lg font-semibold mb-2">Image</label>
+                        <input type="text" id="section2_image" name="section2_image" value="<?php echo htmlspecialchars($page['section2_image']); ?>" class="w-full p-3 rounded-md bg-gray-700 text-white focus:ring focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <label for="section2_title" class="block text-lg font-semibold mb-2">Titre</label>
+                        <input type="text" id="section2_title" name="section2_title" value="<?php echo htmlspecialchars($page['section2_title']); ?>" class="w-full p-3 rounded-md bg-gray-700 text-white focus:ring focus:ring-blue-500">
+                    </div>
                 </div>
                 <div class="mt-4">
                     <label for="section2_text" class="block text-lg font-semibold mb-2">Texte</label>
@@ -164,6 +170,15 @@ include __DIR__ . '/../assets/header.php';
                 <div class="mt-4">
                     <label for="section4_text" class="block text-lg font-semibold mb-2">Texte</label>
                     <textarea id="section4_text" name="section4_text" rows="4" class="w-full p-3 rounded-md bg-gray-700 text-white focus:ring focus:ring-blue-500"><?php echo htmlspecialchars($page['section4_text']); ?></textarea>
+                </div>
+            </div>
+
+            <!-- Bannière -->
+            <div>
+                <h2 class="text-2xl font-bold mb-4">Bannière</h2>
+                <div>
+                    <label for="section5_banner" class="block text-lg font-semibold mb-2">Bannière</label>
+                    <input type="text" id="section5_banner" name="section5_banner" value="<?php echo htmlspecialchars($page['section5_banner']); ?>" class="w-full p-3 rounded-md bg-gray-700 text-white focus:ring focus:ring-blue-500">
                 </div>
             </div>
 
