@@ -122,7 +122,7 @@ $is_logged_in = isset($_SESSION['user_id']);
           <img src="img/shyrrotsuki.png" alt="Vtuber 6" class="w-full h-full rounded-lg">
         </div>
         <div class="flex-none w-40 h-40">
-          <button class="bg-blue-600 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-blue-700 mt-[35%] mb-[35%]">Voir
+          <button class="bg-blue-600 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-blue-700 mt-[35%] mb-[35%]" href="nos_membres.php">Voir
             plus</button>
         </div>
       </div>

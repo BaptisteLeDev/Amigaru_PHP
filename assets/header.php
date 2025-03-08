@@ -1,4 +1,4 @@
-<header class="fixed  top-0 left-0 right-0 px-4 py-3 bg-gradient-to-r shadow-lg rounded-lg mt-5 mx-auto max-w-[80%]"
+<header class="fixed z-50 top-0 left-0 right-0 px-4 py-3 bg-gradient-to-r shadow-lg rounded-lg mt-5 mx-auto max-w-[80%]"
   style="
   background: rgba(255, 255, 255, 0.2);
 border-radius: 16px;
