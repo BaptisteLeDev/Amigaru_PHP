@@ -13,10 +13,6 @@ include __DIR__ . '/../assets/header.php';
 $is_logged_in = isset($_SESSION['user_id']);
 ?>
 
-<<<<<<< HEAD
-
-=======
->>>>>>> No-MVC
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -26,11 +22,7 @@ $is_logged_in = isset($_SESSION['user_id']);
   <title>Amigaru</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="output.css">
-<<<<<<< HEAD
-  <link rel=”icon” href=logo.ico”>
-=======
   <link rel="icon" href="logo.ico">
->>>>>>> No-MVC
   <style>
     .separator {
       width: 50%;
@@ -49,12 +41,7 @@ $is_logged_in = isset($_SESSION['user_id']);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-<<<<<<< HEAD
-  width: 100%;
- ">
-=======
   width: 100%;">
->>>>>>> No-MVC
     <img src="img/logo_typo.png" alt="Logo Amigaru" class="mb-10 mt-10 lg:max-w-[75vh] h-auto">
     <p class="text-center text-lg lg:text-xl font-bold">Agence de Vtubeur Fr</p>
     <div class="mt-12 animate-bounce">
@@ -133,13 +120,8 @@ $is_logged_in = isset($_SESSION['user_id']);
           <img src="img/shyrrotsuki.png" alt="Vtuber 6" class="w-full h-full rounded-lg">
         </div>
         <div class="flex-none w-40 h-40">
-<<<<<<< HEAD
-          <button class="bg-blue-600 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-blue-700 mt-[35%] mb-[35%]">Voir
-            plus</button>
-=======
           <a href="nos_membres.php" class="bg-blue-600 text-white py-2 px-4 rounded-lg shadow-lg hover:bg-blue-700 mt-[35%] mb-[35%] inline-block">Voir
             plus</a>
->>>>>>> No-MVC
         </div>
       </div>
     </div>
@@ -152,11 +134,7 @@ $is_logged_in = isset($_SESSION['user_id']);
       Découvrez une communauté dynamique et passionnée prête à vous accueillir.
     </p>
     <div class="text-center mt-8">
-<<<<<<< HEAD
-      <a href="#" class="bg-yellow-300 text-black py-2 px-4 rounded-lg shadow-lg hover:bg-yellow-400">
-=======
       <a href="rejoindre.php" class="bg-yellow-300 text-black py-2 px-4 rounded-lg shadow-lg hover:bg-yellow-400">
->>>>>>> No-MVC
         Rejoignez-nous !
       </a>
     </div>
@@ -164,8 +142,4 @@ $is_logged_in = isset($_SESSION['user_id']);
   <?php include __DIR__ . '/../assets/footer.php'; ?>
 </body>
 
-<<<<<<< HEAD
-
-=======
->>>>>>> No-MVC
 </html>
