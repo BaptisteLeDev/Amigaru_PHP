@@ -21,7 +21,7 @@ border: 1px solid rgba(255, 255, 255, 0.3);">
     <nav class="hidden lg:flex items-center justify-between space-x-6 ">
       <ul class="flex items-center space-x-6">
         <li><a href="nos_membres.php" class="text-white font-semibold hover:text-neutral-900">Nos Membres</a></li>
-        <li><a href="#" class="text-white font-semibold hover:text-neutral-900">Nous Rejoindre</a></li>
+        <li><a href="rejoindre.php" class="text-white font-semibold hover:text-neutral-900">Nous Rejoindre</a></li>
         <li><a href="#" class="text-white font-semibold hover:text-neutral-900">Nous Contacter</a></li>
       </ul><?php if (isset($is_logged_in) && $is_logged_in): ?>
         <a href="login.php">
@@ -49,7 +49,7 @@ border: 1px solid rgba(255, 255, 255, 0.3);">
       <li><a href="nos_membres.php" class="block text-white font-semibold hover:text-neutral-900 text-left">Nos
           Membres</a>
       </li>
-      <li><a href="#" class="block text-white font-semibold hover:text-neutral-900 text-left">Nous Rejoindre</a></li>
+      <li><a href="rejoindre.php" class="block text-white font-semibold hover:text-neutral-900 text-left">Nous Rejoindre</a></li>
       <li><a href="#" class="block text-white font-semibold hover:text-neutral-900 text-left">Nous Contacter</a></li>
     </ul> <?php if (isset($is_logged_in) && $is_logged_in): ?>
         <a href="login.php">

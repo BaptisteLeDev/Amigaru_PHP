@@ -136,7 +136,7 @@ $is_logged_in = isset($_SESSION['user_id']);
       Découvrez une communauté dynamique et passionnée prête à vous accueillir.
     </p>
     <div class="text-center mt-8">
-      <a href="#" class="bg-yellow-300 text-black py-2 px-4 rounded-lg shadow-lg hover:bg-yellow-400">
+      <a href="rejoindre.php" class="bg-yellow-300 text-black py-2 px-4 rounded-lg shadow-lg hover:bg-yellow-400">
         Rejoignez-nous !
       </a>
     </div>
