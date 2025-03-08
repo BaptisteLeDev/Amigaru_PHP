@@ -1,10 +1,15 @@
 <?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit;
+}
+
 include __DIR__ . '/../config/db.php';
 
 // Vérifier l'ID de la page dans l'URL
 if (!isset($_GET['id'])) {
     die('Aucune page sélectionnée.');
-    //faire redirection page membres
 }
 
 $page_id = (int)$_GET['id'];
@@ -24,6 +29,7 @@ $default_values = [
     'section1_text' => 'Contenu de la section 1',
     'section2_title' => 'Titre de la section 2',
     'section2_text' => 'Contenu de la section 2',
+    'section2_image' => '',
     'section3_image' => '',
     'section3_title' => 'Titre de la section 3',
     'section3_text' => 'Contenu de la section 3',
@@ -41,7 +47,7 @@ foreach ($default_values as $key => $default) {
 
 // Sauvegarder les modifications
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $fields = ['title', 'section1_image', 'section1_title', 'section1_text', 'section2_title', 'section2_text', 'section3_image', 'section3_title', 'section3_text', 'section4_title', 'section4_text', 'section5_banner'];
+    $fields = ['title', 'section1_image', 'section1_title', 'section1_text', 'section2_title', 'section2_text', 'section2_image', 'section3_image', 'section3_title', 'section3_text', 'section4_title', 'section4_text', 'section5_banner'];
     $update_query = "UPDATE pages SET ";
 
     foreach ($fields as $field) {
@@ -64,14 +70,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo '<p style="color: red;">Erreur lors de la mise à jour.</p>';
     }
 }
+
 $is_logged_in = isset($_SESSION['user_id']);
-
 include __DIR__ . '/../assets/header.php';
-
 ?>
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -79,7 +83,6 @@ include __DIR__ . '/../assets/header.php';
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="output.css">
 </head>
-
 <body class="bg-neutral-900 text-white">
     <!-- Section Header -->
     <section class="min-h-[40vh] flex flex-col justify-center items-center p-16" style="background-image: url('img/hero.png');
@@ -122,9 +125,15 @@ include __DIR__ . '/../assets/header.php';
             <!-- Section 2 -->
             <div>
                 <h2 class="text-2xl font-bold mb-4">Section 2</h2>
-                <div>
-                    <label for="section2_title" class="block text-lg font-semibold mb-2">Titre</label>
-                    <input type="text" id="section2_title" name="section2_title" value="<?php echo htmlspecialchars($page['section2_title']); ?>" class="w-full p-3 rounded-md bg-gray-700 text-white focus:ring focus:ring-blue-500">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label for="section2_image" class="block text-lg font-semibold mb-2">Image</label>
+                        <input type="text" id="section2_image" name="section2_image" value="<?php echo htmlspecialchars($page['section2_image']); ?>" class="w-full p-3 rounded-md bg-gray-700 text-white focus:ring focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <label for="section2_title" class="block text-lg font-semibold mb-2">Titre</label>
+                        <input type="text" id="section2_title" name="section2_title" value="<?php echo htmlspecialchars($page['section2_title']); ?>" class="w-full p-3 rounded-md bg-gray-700 text-white focus:ring focus:ring-blue-500">
+                    </div>
                 </div>
                 <div class="mt-4">
                     <label for="section2_text" class="block text-lg font-semibold mb-2">Texte</label>
@@ -164,6 +173,15 @@ include __DIR__ . '/../assets/header.php';
                 </div>
             </div>
 
+            <!-- Bannière -->
+            <div>
+                <h2 class="text-2xl font-bold mb-4">Bannière</h2>
+                <div>
+                    <label for="section5_banner" class="block text-lg font-semibold mb-2">Bannière</label>
+                    <input type="text" id="section5_banner" name="section5_banner" value="<?php echo htmlspecialchars($page['section5_banner']); ?>" class="w-full p-3 rounded-md bg-gray-700 text-white focus:ring focus:ring-blue-500">
+                </div>
+            </div>
+
             <!-- Submit Button -->
             <div class="text-center mt-8">
                 <button type="submit" class="px-6 py-3 bg-blue-600 rounded-lg text-white font-semibold shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
@@ -174,9 +192,14 @@ include __DIR__ . '/../assets/header.php';
     </section>
 
     <!-- Footer -->
+<<<<<<< HEAD
     <footer class="text-center py-4 mt-8 bg-neutral-800 text-gray-400">
         <p>&copy; 2025 Amigaru. Tous droits réservés.</p>
     </footer>
 </body>
 
+=======
+    <?php include __DIR__ . '/../assets/footer.php'; ?>
+</body>
+>>>>>>> No-MVC
 </html>
