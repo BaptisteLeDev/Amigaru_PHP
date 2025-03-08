@@ -1,4 +1,10 @@
 <?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit;
+}
+
 include __DIR__ . '/../config/db.php';
 
 // Vérifier l'ID de la page dans l'URL
@@ -64,14 +70,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo '<p style="color: red;">Erreur lors de la mise à jour.</p>';
     }
 }
+
 $is_logged_in = isset($_SESSION['user_id']);
-
 include __DIR__ . '/../assets/header.php';
-
 ?>
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -79,7 +83,6 @@ include __DIR__ . '/../assets/header.php';
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="output.css">
 </head>
-
 <body class="bg-neutral-900 text-white">
     <!-- Section Header -->
     <section class="min-h-[40vh] flex flex-col justify-center items-center p-16" style="background-image: url('img/hero.png');
@@ -174,9 +177,6 @@ include __DIR__ . '/../assets/header.php';
     </section>
 
     <!-- Footer -->
-    <footer class="text-center py-4 mt-8 bg-neutral-800 text-gray-400">
-        <p>&copy; 2025 Amigaru. Tous droits réservés.</p>
-    </footer>
+    <?php include __DIR__ . '/../assets/footer.php'; ?>
 </body>
-
 </html>
