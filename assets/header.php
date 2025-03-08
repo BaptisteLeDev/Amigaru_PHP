@@ -23,20 +23,19 @@ border: 1px solid rgba(255, 255, 255, 0.3);">
         <li><a href="nos_membres.php" class="text-white font-semibold hover:text-neutral-900">Nos Membres</a></li>
         <li><a href="rejoindre.php" class="text-white font-semibold hover:text-neutral-900">Nous Rejoindre</a></li>
         <li><a href="#" class="text-white font-semibold hover:text-neutral-900">Nous Contacter</a></li>
-      </ul><?php if (isset($is_logged_in) && $is_logged_in): ?>
+      </ul>
+      <?php if (isset($is_logged_in) && $is_logged_in): ?>
+        <a href="membre_edition.php?id=<?= $_SESSION['user_id']; ?>">
+          <button
+            class="flex items-center gap-2 px-4 py-2 bg-white text-black font-bold rounded-full hover:bg-neutral-900 hover:text-white">
+            Édition <span class="text-lg">🖌️</span>
+          </button>
+        </a>
+      <?php else: ?>
         <a href="login.php">
           <button
             class="flex items-center gap-2 px-4 py-2 bg-white text-black font-bold rounded-full hover:bg-neutral-900 hover:text-white">
             Compte Étoile <span class="text-lg">✨</span>
-
-          </button>
-        </a>
-      <?php else: ?>
-        <a href="membre_edition.php">
-          <button
-            class="flex items-center gap-2 px-4 py-2 bg-white text-black font-bold rounded-full hover:bg-neutral-900 hover:text-white">
-            Édition <span class="text-lg">🖌️</span>
-
           </button>
         </a>
       <?php endif; ?>
@@ -46,28 +45,25 @@ border: 1px solid rgba(255, 255, 255, 0.3);">
   <!-- Menu Mobile -->
   <div id="mobile-menu" class="hidden flex-col mt-4 space-y-4 lg:hidden">
     <ul class="space-y-2">
-      <li><a href="nos_membres.php" class="block text-white font-semibold hover:text-neutral-900 text-left">Nos
-          Membres</a>
-      </li>
+      <li><a href="nos_membres.php" class="block text-white font-semibold hover:text-neutral-900 text-left">Nos Membres</a></li>
       <li><a href="rejoindre.php" class="block text-white font-semibold hover:text-neutral-900 text-left">Nous Rejoindre</a></li>
       <li><a href="#" class="block text-white font-semibold hover:text-neutral-900 text-left">Nous Contacter</a></li>
-    </ul> <?php if (isset($is_logged_in) && $is_logged_in): ?>
-        <a href="login.php">
-          <button
-            class="flex items-center gap-2 px-4 py-2 bg-white text-black font-bold rounded-full hover:bg-neutral-900 hover:text-white">
-            Compte Étoile <span class="text-lg">✨</span>
-
-          </button>
-        </a>
-      <?php else: ?>
-        <a href="membre_edition.php">
-          <button
-            class="flex items-center gap-2 px-4 py-2 bg-white text-black font-bold rounded-full hover:bg-neutral-900 hover:text-white">
-            Édition <span class="text-lg">🖌️</span>
-
-          </button>
-        </a>
-      <?php endif; ?>
+    </ul>
+    <?php if (isset($is_logged_in) && $is_logged_in): ?>
+      <a href="membre_edition.php?id=<?= $_SESSION['user_id']; ?>">
+        <button
+          class="flex items-center gap-2 px-4 py-2 bg-white text-black font-bold rounded-full hover:bg-neutral-900 hover:text-white">
+          Édition <span class="text-lg">🖌️</span>
+        </button>
+      </a>
+    <?php else: ?>
+      <a href="login.php">
+        <button
+          class="flex items-center gap-2 px-4 py-2 bg-white text-black font-bold rounded-full hover:bg-neutral-900 hover:text-white">
+          Compte Étoile <span class="text-lg">✨</span>
+        </button>
+      </a>
+    <?php endif; ?>
   </div>
 </header>
 
